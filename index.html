@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WOOK WEAR</title>
+    <!--
+  {
+    tagName: 'meta',
+    property: 'og:image',
+    content:
+      'https://cdn.shopify.com/s/files/1/0639/8774/4854/files/ronjafman-apocalypse-chaos.jpg?v=1741136042',
+  },
+  {
+    tagName: 'meta',
+    property: 'og:image:alt',
+    content: 'Cloud Nine',
+  },
+  {
+    tagName: 'meta',
+    property: 'twitter:card',
+    content: 'summary_large_image',
+  },
+  {
+    tagName: 'meta',
+    property: 'twitter:title',
+    content: 'Cloud Nine',
+  },
+  {
+    tagName: 'meta',
+    property: 'twitter:image',
+    content:
+      'https://cdn.shopify.com/s/files/1/0639/8774/4854/files/ronjafman-apocalypse-chaos.jpg?v=1741136042',
+  }, -->
+  </head>
+  <body>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+        background-color: black;
+        width: 100%;
+      }
+
+      #image {
+        align-items: center;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+      }
+
+      #image img {
+        max-width: 100%;
+        max-height: 100%;
+        object-fit: contain;
+        transform: scale(8);
+        opacity: 0;
+        animation: zoomFade 1s ease-in-out forwards;
+      }
+
+      @keyframes zoomFade {
+        0% {
+          transform: scale(8);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    </style>
+
+    <div id="image">
+      <iframe
+        width="100%"
+        height="100%"
+        src="https://www.youtube.com/embed/6ouG6L-2L3Q?autoplay=1&mute=1&controls=0"
+        title="Infinite Relaxation [Part 1] - A Mandelbrot Fractal Zoom (3e3284)"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        style="
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 110%;
+          height: 110%;
+          transform: scale(1.1);
+        "
+      ></iframe>
+    </div>
+    <audio autoplay id="audio">
+      <source src="psycho.mp3" type="audio/mpeg" />
+    </audio>
+
+    <script>
+      const image = document.getElementById("image");
+      const audio = document.getElementById("audio");
+
+      image.addEventListener("click", () => {
+        audio.play();
+      });
+
+      image.addEventListener("touchstart", () => {
+        audio.play();
+      });
+    </script>
+  </body>
+</html>
